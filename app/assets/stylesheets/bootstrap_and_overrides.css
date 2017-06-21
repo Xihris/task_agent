@@ -1,0 +1,127 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Static version of css will use Glyphicons sprites by default
+  =require twitter-bootstrap-static/sprites
+*/
+
+.btn
+{
+  margin-left:5px;
+}
+
+.btn-zenit { 
+  color: #ffffff; 
+  background-color: #00ABBD; 
+  border-color: #008A99; 
+} 
+ 
+.btn-zenit:hover, 
+.btn-zenit:focus, 
+.btn-zenit:active, 
+.btn-zenit.active, 
+.open .dropdown-toggle.btn-zenit { 
+  color: #ffffff; 
+  background-color: #008A99; 
+  border-color: #008A99; 
+} 
+ 
+.btn-zenit:active, 
+.btn-zenit.active, 
+.open .dropdown-toggle.btn-zenit { 
+  background-image: none; 
+} 
+ 
+.btn-zenit.disabled, 
+.btn-zenit[disabled], 
+fieldset[disabled] .btn-zenit, 
+.btn-zenit.disabled:hover, 
+.btn-zenit[disabled]:hover, 
+fieldset[disabled] .btn-zenit:hover, 
+.btn-zenit.disabled:focus, 
+.btn-zenit[disabled]:focus, 
+fieldset[disabled] .btn-zenit:focus, 
+.btn-zenit.disabled:active, 
+.btn-zenit[disabled]:active, 
+fieldset[disabled] .btn-zenit:active, 
+.btn-zenit.disabled.active, 
+.btn-zenit[disabled].active, 
+fieldset[disabled] .btn-zenit.active { 
+  background-color: #00ABBD; 
+  border-color: #008A99; 
+} 
+ 
+.btn-zenit .badge { 
+  color: #00ABBD; 
+  background-color: #ffffff; 
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #00ABBD;
+    border-color: #00ABBD;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #00ABBD;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #00ABBD;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #d9d9d9;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #00ABBD;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #00ABBD;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #00ABBD;
+    border-bottom-color: #00ABBD;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #00ABBD;
+    border-bottom-color: #00ABBD;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #00ABBD;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #00ABBD;
+    }
+}

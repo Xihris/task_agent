@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <%= simple_form_for @temp do |f| %>
+        <%= f.input :author_id, label: 'Author' do %>
+        <%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control'} %>
+        <% end %>
+        <%= f.input :companys, hint: 'Вводим компании используя символ ";"' %>
+        <%= f.input :date_start, as: :date %>
+        <%= f.input :date_end, as: :date %>   
+        <%= f.submit 'Добавить' %>
+      <% end %>
+    </div>
+    <div class="row">
+    <div class="col-sm-4">
+      <%= simple_form_for @author do |f| %>
+        <%= f.input :name %>
+        <%= f.input :phone %>
+        <%= f.input :department, label: 'Department' %>
+        <%= f.input :photo %>
+        <%= f.submit 'Добавить' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

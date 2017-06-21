@@ -1,0 +1,9 @@
+<div class="container">
+<% @users.each do |user| %>
+<p>
+    <div class="btn-group" role="group">
+<%= button_to "#{user.name} #{find_count(user)}", user_path(user), method: :get, class: "btn btn-success" %>
+    </div>
+</p>
+<% end %>
+</div>

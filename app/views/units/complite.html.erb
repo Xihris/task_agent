@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="row">
+	<div class="col-md-6"> 
+			<%= simple_form_for(@unit) do |f| %>
+			<%= f.input :date_finish %>
+            <%= f.input :sum_ur %>
+			<%= f.input :sum_fiz %>
+			<%= f.input :comment %>
+			<%= f.input :complete, as: :boolean %>
+			<%= f.button :submit %>
+			<% end %>
+		</div>
+	</div>
+</div>

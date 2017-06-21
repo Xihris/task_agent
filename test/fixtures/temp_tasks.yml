@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  companys: MyText
+  date_start: 2017-06-21
+  date_end: 2017-06-21
+  author_id: 1
+  user_id: 1
+
+two:
+  companys: MyText
+  date_start: 2017-06-21
+  date_end: 2017-06-21
+  author_id: 1
+  user_id: 1

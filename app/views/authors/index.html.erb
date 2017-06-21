@@ -1,0 +1,21 @@
+<div class="container">
+<table class="table table-condensed">
+	<thead>
+				<tr>
+					<th>Автор</th>
+					<th>Телефон</th>
+					<th>Подразделение</th>
+					<th>Фото</th>
+				</tr>
+	</thead>
+	<tbody>
+	<% @authors.each do |author| %>
+	<tr>
+			<td><%= link_to author.name, edit_author_path(author) %></td>
+			<td><%= author.phone %></td>
+			<td><%= author.department %></td>
+		<td><a class="btn btn-default" href="/tasks_temps/new" role="button">Редактировать</a></td>
+	</tr>
+	<% end %>
+ </table>
+</div>
