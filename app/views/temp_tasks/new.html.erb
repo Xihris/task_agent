@@ -5,6 +5,7 @@
         <%= f.input :author_id, label: 'Author' do %>
         <%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control'} %>
         <% end %>
+        <%= render partial: 'authors/author', collection: @names %>
         <%= f.input :companys, hint: 'Вводим компании используя символ ";"' %>
         <%= f.input :date_start, as: :date %>
         <%= f.input :date_end, as: :date %>   
