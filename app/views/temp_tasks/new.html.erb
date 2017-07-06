@@ -11,17 +11,7 @@
         <%= f.submit 'Добавить' %>
       <% end %>
     </div>
-    <div class="row">
-    <div class="col-sm-4">
-      <%= simple_form_for @author do |f| %>
-        <%= f.input :name %>
-        <%= f.input :phone %>
-        <%= f.input :department, label: 'Department' %>
-        <%= f.input :photo %>
-        <%= f.submit 'Добавить' %>
-      <% end %>
-    </div>
-  </div>
+    <%= render '/authors/author' %>
 </div>
   </div>
 </div>
