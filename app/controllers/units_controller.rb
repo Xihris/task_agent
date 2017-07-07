@@ -37,7 +37,10 @@ class UnitsController < ApplicationController
   def index
     @units = Unit.where(complete: false).order(:date_end)
     @users = User.all
+    cbr
+  end
     
+  def cbr
     decline = Nokogiri::HTML(open(CBR)).css('ul.without_dash:nth-child(7) > li')
     date = decline.map{|x| x.css('span.smallest').inner_text}.map{|x| Date.parse(x)}
     url = decline.map{|x| x.css('a')[0]}.map{|x| "https://www.cbr.ru#{x['href']}"}

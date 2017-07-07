@@ -1,12 +1,12 @@
-	<div class="row">
-<table class="table table-condensed">
-<tbody>
-<% @u.each do |x| %>
-	<tr class="danger">
-	<td><h3><%= x.css('h1').text %></h3>
-	<em><%= x.css('p').inner_text %></em></td>
-	</tr>
-<% end %>
-</tbody>
-</table>
+<div class="row">
+	<table class="table table-condensed">
+		<tbody>
+			<% @u.each do |x| %>
+				<tr class="danger">
+				<td><h3><%= x.css('h1').text %></h3>
+				<em><%= x.css('p').inner_text %></em></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
 </div>
