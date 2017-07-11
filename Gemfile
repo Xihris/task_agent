@@ -37,6 +37,7 @@ gem 'factory_girl'
 gem 'json'
 gem 'simple_form'
 gem 'russian'
+gem 'devise'
 
 group :production do
   gem 'pg'

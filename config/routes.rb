@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
      
+  devise_for :models
   root 'units#index'
   get 'units/group/:id' => 'units#group', as: :units_group
   get 'units/search' => 'units#search', as: :units_search
