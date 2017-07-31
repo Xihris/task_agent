@@ -6,7 +6,7 @@
 <% @users.each do |user| %>
     <div class="btn-group" role="group">
     	<td>
-<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+<%= button_to [user.name || user.email, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
 	</td>
 <% end %>
     </div>
