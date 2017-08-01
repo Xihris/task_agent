@@ -6,12 +6,13 @@
 <% @users.each do |user| %>
     <div class="btn-group" role="group">
     	<td>
-<%= button_to [user.name || user.email, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
 	</td>
 <% end %>
     </div>
     </div>
  <td>
+     
  <div class="col-xs-6 col-md-offset-4">   
 <%= button_to "Добавить задачу", new_temp_task_path, method: :get, class: "btn btn-primary btn-lg" %>
 </td>
