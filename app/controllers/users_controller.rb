@@ -7,5 +7,9 @@ class UsersController < ApplicationController
    
   def index
   end
-  
+ 
+  def edit
+    @users = User.all
+  end
+ 
 end
