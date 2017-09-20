@@ -49,7 +49,7 @@
             <ul class="nav navbar-nav navbar-right text-size">
               <% if user_signed_in? %>
                 <li><%= content_tag(:p, "Вы вошли как: " + current_user.name, class: ["navbar-text"]) %></li>
-                <li> <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
+                <li> <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
                 <li> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
               <% else %>
                 <li>

@@ -61,4 +61,15 @@ body {
 	margin-left: -11px;
 }
 
-
+.add_company {
+	max-width: 600px;
+}
+.add_company_author {
+	min-width: 418px;
+}
+.add_company_user {
+	min-width: 344px;
+}
+.date-width {
+	min-width: 299px;
+}
