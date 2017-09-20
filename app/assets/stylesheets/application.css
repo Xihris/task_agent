@@ -12,7 +12,11 @@
  *
  *= require_tree .
  *= require_self
+  *= require bootstrap-datepicker
+
  */
+
+
  html {
 	position: relative;
 	min-height: 100%;
@@ -33,3 +37,28 @@ body {
     vertical-align: middle;
     text-align: right;
 }
+
+#user-list {
+	width: 100%;
+}
+.task {
+	float: right;
+	max-width: 178px;
+}
+.input-group {
+	width: 100%;
+}
+.text-size {
+	font-size: medium;
+}
+#cont {
+	padding-left: 10px;
+	padding-right: 17px;
+}
+
+.block-btn {
+	/*padding-right: 2px; */
+	margin-left: -11px;
+}
+
+

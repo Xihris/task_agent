@@ -1,21 +1,39 @@
 <div class="container">
-<%= render 'cbr' %>
-<div class="row">
-	<table>
-	<div class="col-xs-12 col-sm-6 col-md-8">
-<% @users.each do |user| %>
-    <div class="btn-group" role="group">
-    	<td>
-<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
-	</td>
-<% end %>
-    </div>
-    </div>
- <td>
- <div class="col-xs-6 col-md-offset-4">   
-<%= button_to "Добавить задачу", new_temp_task_path, method: :get, class: "btn btn-primary btn-lg" %>
-</td>
-</table>
-</div>
- <%= render 'table' %>
+	<%= render 'cbr' %>
+
+	<div class="row" id="cont">
+	  <table id="user-list">
+        <tr>
+	      <div class="col-xs-8 left-names">
+			<% @users.each do |user| %>
+	    	  <td class="names btn-group">
+				<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+			  </td>
+			<% end %>
+		  </div>
+	   	  <div class="col-xs-4">
+	 		  <td>
+	 		    <div class="task btn btn-primary btn-lg">Добавить задачу</div>
+			  </td>
+			</div>
+		</tr>
+	  </table>
+	</div>
+
+	<br>
+	<div class="row">
+	  <div class="col-xs-8">
+	  	<%= render 'add_form' %>
+	  </div>
+	  <div class="col-xs-4">
+			<%= render 'author' %>
+		</div>
+	</div>
+	
+	<br>
+	<div class="row">
+		<div class="col-xs-12">
+			<%= render 'table' %>
+		</div>			
+	</div>
 </div>

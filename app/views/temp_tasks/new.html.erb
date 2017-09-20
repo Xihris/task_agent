@@ -3,16 +3,23 @@
     <div class="col-sm-4">
       <%= simple_form_for @temp do |f| %>
         <%= f.input :author_id, label: 'Author' do %>
-        <%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control'} %>
+          <%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control'} %>
         <% end %>
+
         <%= render partial: 'authors/author', collection: @names %>
-        <%= f.input :companys, hint: 'Вводим компании используя символ ";"' %>
-        <%= f.input :date_start, as: :date %>
-        <%= f.input :date_end, as: :date %>   
-        <%= f.submit 'Добавить' %>
+
+        <%= simple_form_for @temp do |f| %>
+          <%= f.input :user_id, label: 'User' do %>
+            <%= f.select :user_id, User.all.map{ |user| [user.name, user.id] }, {:placeholder => ""}, {:class => 'form-control'} %>
+          <% end %>
+
+          <%= f.input :companys, hint: 'Вводим компании используя символ ";"' %>
+          <%= f.input :date_start, as: :date %>
+          <%= f.input :date_end, as: :date %>   
+          <%= f.submit 'Добавить' %>
+        <% end %>
       <% end %>
     </div>
     <%= render '/authors/author' %>
-</div>
   </div>
 </div>
