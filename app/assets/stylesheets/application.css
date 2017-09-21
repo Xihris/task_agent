@@ -76,19 +76,27 @@ body {
 }
 #authors_style_phone {
 	min-width: 387px;
+	margin-bottom: 20px;
 }
 .authors_style_photo {
 	min-width: 416px;
+	margin-bottom: 20px;
 }
 .authors_style {
-	min-width: 170px;
+	min-width: 121px;
 }
 #authors_style_name {
 	min-width: 415px;
+	margin-bottom: 20px;
 }
 .margin_bottom {
 	margin-bottom: 20px;
 }
 #forms_css {
-	margin-bottom: 50px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.color_btn {
+	border-radius: 50px;
 }
