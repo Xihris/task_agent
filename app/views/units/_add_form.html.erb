@@ -6,22 +6,18 @@
 		<%= f.text_field :date_end, {:class => 'datepicker date-width', :placeholder => 'Дата окончания'} %>
 	</div>
 
-	<br>
-
 	<div>
 		<%= f.text_area :companys, rows: 1, class: 'form-control add_company', placeholder: 'Несколько компаний  через ";"' %>
 	</div>
 
-	<br>
-		
-	<div class="form-inline">
-		<label>Авторы</label>
+	<div class="form-inline margin_bottom">
+		<label>Инициаторы</label>
 		<%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control add_company_author'} %>
-		<div class="author btn btn-sm btn-primary">добавить автора</div>
+		<div class="author btn btn-sm btn-primary">добавить инициатора</div>
 	</div>
-	<br>
+
 	<div class="form-inline">
-		<label>Пользователи</label>
+		<label>Исполнители</label>
 		<%= f.select :user_id, User.all.map{ |user| [user.name, user.id] }, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
 		<%= f.submit "Сохранить задачу", class: "btn btn-primary" %>
 	</div>

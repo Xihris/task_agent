@@ -1,13 +1,30 @@
-<div class="container author-tab" style="display: none;">
-  <div class="row">
-    <div class="col-sm-4">
-      <%= simple_form_for @author do |f| %>
-        <%= f.input :name %>
-        <%= f.input :phone %>
-        <%= f.input_field :department %>
-        <%= f.input :photo %>
-        <%= f.submit 'Добавить' %>
-      <% end %>
+<div class="author-tab" style="display: none;">
+
+  <%= form_for :author, :url => {:controller => 'authors', action: "create", role: 'form'} do |f| %>
+    <div class="form-inline margin_bottom">
+      <label>ФИО:</label>
+      <%= f.text_field :name, {:class => 'form-control',:id => 'authors_style_name', :placeholder => 'ФИО', :type => 'text'} %>
+    </div>  
+
+    <div class="form-inline margin_bottom">
+      <label>Телефон: </label>
+      <%= f.text_field :phone, {:class => 'form-control', :id => 'authors_style_phone', :placeholder => 'телефон'} %>
+    </div>  
+
+
+    <div class="form-inline margin_bottom">
+      <label>Фото</label>  
+      <%= f.text_field :photo, {:class => 'form-control authors_style_photo', :placeholder => 'url', :type => 'url'} %>
     </div>
-  </div>
+
+    <div class="form-inline">
+      <div class="form-group">
+        <label>Департамент:</label>
+        <%= f.select :department, Author.all.map{ |i| i.department }, {:placeholder => ""}, {:class => 'form-control authors_style'} %>
+      </div>
+      <%= f.submit "Сохранить инициатора", class: "btn btn-primary" %>
+
+    </div>
+
+  <% end %>
 </div>

@@ -57,19 +57,35 @@ body {
 }
 
 .block-btn {
-	/*padding-right: 2px; */
 	margin-left: -11px;
 }
 
 .add_company {
 	max-width: 600px;
+	margin-bottom: 20px;
 }
 .add_company_author {
-	min-width: 418px;
+	min-width: 357px;
 }
 .add_company_user {
-	min-width: 344px;
+	min-width: 352px;
 }
 .date-width {
 	min-width: 299px;
+	margin-bottom: 20px;
+}
+#authors_style_phone {
+	min-width: 387px;
+}
+.authors_style_photo {
+	min-width: 416px;
+}
+.authors_style {
+	min-width: 170px;
+}
+#authors_style_name {
+	min-width: 415px;
+}
+.margin_bottom {
+	margin-bottom: 20px;
 }
