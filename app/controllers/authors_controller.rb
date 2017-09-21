@@ -15,7 +15,7 @@ class AuthorsController < ApplicationController
   end
 
   def department
-    @authors = Author.where(id: params[:id], department: params[:department])
+    @authors = Author.where(department: params[:department], name: params[:name])
   end
 
   def index

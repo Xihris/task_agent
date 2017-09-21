@@ -7,8 +7,13 @@ class TempTasksController < ApplicationController
 
   def create
     @temp = TempTask.new(temp_params)
-    @temp.save
-    redirect_to new_unit_path
+      if @temp.valid?
+         @temp.save
+         redirect_to new_unit_path
+      else
+        'new'
+      end
+    
   end
 
   private
