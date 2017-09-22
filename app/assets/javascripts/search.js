@@ -10,6 +10,10 @@ $(document).ready(function() {
 		$('.author-tab').toggle();
 	});
 
+	$('.home_btn').click(function() {
+		location.reload();
+	});
+
 	$('.datepicker').datepicker({"format": "dd.mm.yyyy", "autoclose": true});
 
 	table.onmouseover = function(event) {
