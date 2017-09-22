@@ -12,7 +12,6 @@ $(document).ready(function() {
 
 	$('.datepicker').datepicker({"format": "dd.mm.yyyy", "autoclose": true});
 
-
 	table.onmouseover = function(event) {
 		let row = event.target.parentElement;
 		if(row.localName == 'tr'){
