@@ -9,12 +9,12 @@
       <label>Департамент:</label>
         <%= f.select :department_id, Department.all.map{ |department| [department.short_department, department.id] }, {:placeholder => ""}, {:class => 'form-control authors_style'} %>
       </div>
-      <button type="button" class="btn btn-primary color_btn">Добавить департамент</button>
+      <button type="button" class="btn btn-info color_btn">Добавить департамент</button>
     </div>
     <%= render 'add_departament' %>
     <div class="form-inline margin_bottom">
       <%= f.text_field :phone, {:class => 'form-control authors_style_phone', :placeholder => 'Телефон'} %>
-      <%= f.submit "Сохранить инициатора", class: "btn btn-warning" %>
+      <%= f.submit "Сохранить инициатора", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>

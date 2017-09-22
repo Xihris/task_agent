@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	
+	$('.home_btn').click(function() {
+		document.location.replace("/");
+	});
+
 	$('.task').click(function() {
 		$('.add_task').toggle();
 		if ($('.add_task')["0"].style.display == "none") {
@@ -11,16 +16,12 @@ $(document).ready(function() {
 		$('.author-tab').toggle();
 	});
 
-	$('.home_btn').click(function() {
-		location.reload();
-	});
-
 	$('.color_btn').click(function() {
 		$('.add_departament').toggle();
 	});
 
 	$('.datepicker').datepicker({"format": "dd.mm.yyyy", "autoclose": true});
-
+	// let table = $('.table');
 	table.onmouseover = function(event) {
 		let row = event.target.parentElement;
 		if(row.localName == 'tr'){
