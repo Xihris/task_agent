@@ -3,6 +3,7 @@ $(document).ready(function() {
 		$('.add_task').toggle();
 		if ($('.add_task')["0"].style.display == "none") {
 			$('.author-tab').hide();
+			$('.add_departament').hide();
 		}
 	});
 	
@@ -12,6 +13,10 @@ $(document).ready(function() {
 
 	$('.home_btn').click(function() {
 		location.reload();
+	});
+
+	$('.color_btn').click(function() {
+		$('.add_departament').toggle();
 	});
 
 	$('.datepicker').datepicker({"format": "dd.mm.yyyy", "autoclose": true});

@@ -1,0 +1,8 @@
+<div class="add_departament" style="display: none;">
+	<%= form_for :departament, :url => {:controller => 'departments', action: "create", role: 'form'} do |f| %>
+		<div class="form-inline margin_bottom">
+			<%= f.text_field :full_department, {:class => 'form-control authors_style_phone', :placeholder => 'полное название департамента', :type => 'text'} %>
+			<%= f.submit "Сохранить", class: "btn btn-warning save_dep" %>
+		</div>
+	<% end %>
+</div>

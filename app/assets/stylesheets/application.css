@@ -74,16 +74,15 @@ body {
 	min-width: 299px;
 	margin-bottom: 20px;
 }
-#authors_style_phone {
-	min-width: 387px;
-	margin-bottom: 20px;
+.authors_style_phone {
+	min-width: 270px;
 }
 .authors_style_photo {
 	min-width: 416px;
 	margin-bottom: 20px;
 }
 .authors_style {
-	min-width: 121px;
+	min-width: 170px;
 }
 #authors_style_name {
 	min-width: 415px;
@@ -97,6 +96,6 @@ body {
 	margin-top: 8px;
 }
 
-.color_btn {
-	border-radius: 50px;
+.save_dep {
+	min-width: 176px;
 }
