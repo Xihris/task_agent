@@ -59,12 +59,10 @@
                   <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %> 
                 </li>
               <% end %>
-                <li>   
-                  <div class="btn btn-lg navbar-link home_btn">
-                  <a href='javascript: document.location.href = "/";'>
+                <li>          
+                  <%= link_to root_path, class: "btn btn-lg navbar-link home_btn" do %>
                     <span class="glyphicon glyphicon-home"></span>
-                  </a>
-                  </div>          
+                  <% end %>     
                 </li>
             </ul>
           </div>

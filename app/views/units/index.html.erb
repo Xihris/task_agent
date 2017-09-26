@@ -36,4 +36,19 @@
 			<%= render 'table' %>
 		</div>			
 	</div>
+<div>
+    <table>
+<% @users.each do |user| %>
+<tr>
+<th><%=  user.name %></th>
+<th><%= check_box_tag(:role) %></th>
+<th><%= label_tag(:role, "supeuser") %></th>
+<th><%= check_box_tag(:role) %></th>
+<th><%= label_tag(:role, "admin") %></th>
+<th><%= check_box_tag(:role) %></th>
+<th><%= label_tag(:role, "user") %></th>
+</tr>	
+<% end %>
+</table>
+</div>
 </div>

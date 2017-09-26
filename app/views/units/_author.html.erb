@@ -7,7 +7,7 @@
     <div class="form-inline margin_bottom">
       <div class="form-group">
       <label>Департамент:</label>
-        <%= f.select :department_id, Department.all.map{ |department| [department.short_department, department.id] }, {:placeholder => ""}, {:class => 'form-control authors_style'} %>
+        <%= f.select :department_id, Department.department_select, {:placeholder => ""}, {:class => 'form-control authors_style'} %>
       </div>
       <button type="button" class="btn btn-info color_btn">Добавить департамент</button>
     </div>

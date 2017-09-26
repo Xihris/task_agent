@@ -12,13 +12,13 @@
 
 	<div class="form-inline margin_bottom">
 		<label>Инициаторы</label>
-		<%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control add_company_author'} %>
+		<%= f.select :author_id, Author.author_select, {:placeholder => ""}, {:class => 'form-control add_company_author'} %>
 		<div class="author btn btn-sm btn-info">добавить инициатора</div>
 	</div>
 
 	<div class="form-inline">
 		<label>Исполнители</label>
-		<%= f.select :user_id, User.all.map{ |user| [user.name, user.id] }, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
+		<%= f.select :user_id, User.user_select, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
 		<%= f.submit "Сохранить задачу", class: "btn btn-primary" %>
 	</div>
 

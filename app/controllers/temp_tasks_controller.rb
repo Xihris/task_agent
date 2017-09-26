@@ -1,8 +1,8 @@
 class TempTasksController < ApplicationController
   def new
     @temp = TempTask.new
-    @author = Author.new
-    @user = User.new
+    # @author = Author.new
+    # @user = User.new
   end
 
   def create

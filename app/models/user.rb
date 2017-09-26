@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
     has_many :units
     has_many :temp_tasks
+    
+  
+  def self.user_select
+    User.all.map {|user| [user.name, user.id]}
+  end  
+  # def user
+  #   @user = User.all.map{ |user| [user.name, user.id] }
+  # end
 end
