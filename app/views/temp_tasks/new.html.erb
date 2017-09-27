@@ -10,7 +10,7 @@
 
         <%= simple_form_for @temp do |f| %>
           <%= f.input :user_id, label: 'User' do %>
-            <%= f.select :user_id, User.user_select, {:placeholder => ""}, {:class => 'form-control'} %>
+            <%= f.select :user_id, User.user_out, {:placeholder => ""}, {:class => 'form-control'} %>
           <% end %>
 
           <%= f.input :companys, hint: 'Вводим компании используя символ ";"' %>

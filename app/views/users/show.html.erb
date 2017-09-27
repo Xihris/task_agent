@@ -9,7 +9,7 @@
 			</tr>
 		</thead>
 <tbody>
-<% @author.units.each do |unit| %>
+<% @units.each do |unit| %>
 	<% @date_result = (unit.date_end - Date.today).to_i %>
 	
 	<tr class=<%= color %>>

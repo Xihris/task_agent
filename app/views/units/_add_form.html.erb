@@ -18,7 +18,7 @@
 
 	<div class="form-inline">
 		<label>Исполнители</label>
-		<%= f.select :user_id, User.user_select, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
+		<%= f.select :user_id, User.where(in_out: true).user_select, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
 		<%= f.submit "Сохранить задачу", class: "btn btn-primary" %>
 	</div>
 

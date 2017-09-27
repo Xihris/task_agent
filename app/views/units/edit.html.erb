@@ -9,7 +9,7 @@
         	<%= f.select :author_id, Author.author_select, {:placeholder => ""}, {:class => 'form-control'} %>
         	<% end %>
         	<%= f.input :user_id, label: 'User' do %>
-			<%= f.select :user_id, User.user_select, {:placeholder => ""}, {:class => 'form-control'} %>
+			<%= f.select :user_id, User.user_out, {:placeholder => ""}, {:class => 'form-control'} %>
 			<% end %>
 			<%= f.button :submit %>
 			<% end %>

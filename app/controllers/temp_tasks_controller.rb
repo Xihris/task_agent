@@ -16,7 +16,7 @@ end
 
   private
   def temp_params
-    params.require(:temp_task).permit(:companys, :date_start, :date_end, :author_id, :user_id)
+    params.require(:temp_task).permit(:companys, :date_start, :date_end, :author_id, :user_id, :branch_id)
   end
 
 end

@@ -10,7 +10,18 @@ class User < ApplicationRecord
   def self.user_select
     User.all.map {|user| [user.name, user.id]}
   end  
+  
+  def self.user_out
+    User.where(in_out: true).map {|user| [user.name, user.id]}
+  end  
+  
+  # def self.user_sel
+  #   user_select.where(in_out: true)
+  # end  
+  
   # def user
   #   @user = User.all.map{ |user| [user.name, user.id] }
   # end
+  
+  # scope :pub, -> { where(complete: false) }
 end
