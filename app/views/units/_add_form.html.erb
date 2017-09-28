@@ -17,8 +17,9 @@
 	</div>
 
 	<div class="form-inline">
+		<%= hidden_field_tag :branch_id, current_user.branch_id %>
 		<label>Исполнители</label>
-		<%= f.select :user_id, User.where(in_out: true).user_select, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
+		<%= f.select :user_id, User.where(role: current_user.role).user_out, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
 		<%= f.submit "Сохранить задачу", class: "btn btn-primary" %>
 	</div>
 

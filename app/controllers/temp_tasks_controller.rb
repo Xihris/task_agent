@@ -12,6 +12,7 @@ class TempTasksController < ApplicationController
          redirect_to new_unit_path
       else
         'new'
+  end
 end
 
   private

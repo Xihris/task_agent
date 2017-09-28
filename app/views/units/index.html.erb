@@ -8,8 +8,13 @@
 			<% @users.each do |user| %>
 	    	  <td class="names btn-group">
 				<% if user.in_out? %>
-				  <%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
-			  	<% end %>
+				<% case user.in_out? %>
+						<% when current_user.branch_id == 0 %>
+				  			<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+						<% when current_user.branch_id == user.branch_id %>
+							<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+						<% end %>
+				<% end %>
 			  </td>
 			<% end %>
 		  </div>
@@ -43,13 +48,15 @@
         <% @users.each do |user| %>
         <tr>
             <th><%=  user.name %></th>
-            <th><%= user.branch_id %></th>
+            <th><%=  user.branch_id %></th>
+            <th><%= current_user.branch_id == user.branch_id %></th>
             <th><%= check_box_tag(:role) %></th>
             <th><%= label_tag(:role, "supeuser") %></th>
             <th><%= check_box_tag(:role) %></th>
             <th><%= label_tag(:role, "admin") %></th>
             <th><%= check_box_tag(:role) %></th>
             <th><%= label_tag(:role, "user") %></th>
+            <th><%= user.in_out? %></th>
             <th><%= check_box_tag(:in_out) %></th>
             <th><%= label_tag(:in_out, "уволен") %></th>
         </tr>	
