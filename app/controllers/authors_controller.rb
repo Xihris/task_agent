@@ -11,8 +11,8 @@ class AuthorsController < ApplicationController
 
   def show
     @author = Author.find(params[:id])
-    @units = Unit.where(author_id: params[:id])
-    @department = Department.all
+    # @units = Unit.where(author_id: params[:id])
+    # @department = Department.all
   end
 
   def department

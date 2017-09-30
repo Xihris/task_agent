@@ -11,5 +11,9 @@ class UsersController < ApplicationController
   def edit
     @users = User.all
   end
+
+  def admin
+    @users = User.all
+  end
  
 end
