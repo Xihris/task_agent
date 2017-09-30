@@ -7,11 +7,10 @@
     <div class="form-inline margin_bottom">
       <div class="form-group">
       <label>Департамент:</label>
-        <%= f.select :department_id, Department.all.map{ |department| [department.short_department, department.id] }, {:placeholder => ""}, {:class => 'form-control authors_style'} %>
+        <%= f.select :department_id, Department.all.map{ |department| [department.short_department, department.id] }, {:placeholder => ""}, {:class => 'form-control authors_style', :id => 'form_for_reload'} %>
       </div>
       <button type="button" class="btn btn-info color_btn">Добавить департамент</button>
     </div>
-    <%= render 'add_departament' %>
     <div class="form-inline margin_bottom">
       <%= f.text_field :phone, {:class => 'form-control authors_style_phone', :placeholder => 'Телефон'} %>
       <%= f.submit "Сохранить инициатора", class: "btn btn-primary" %>

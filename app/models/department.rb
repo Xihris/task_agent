@@ -1,7 +1,6 @@
 class Department < ApplicationRecord
 
-  validates :full_department, presence: true
-  validates :full_department, format:{ :with => /[а-яА-Я ]+/ }
+  validates :full_department, presence: true, format:{ :with => /[а-яА-Я]+/ }
 
   before_save :short
 
