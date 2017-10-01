@@ -5,7 +5,8 @@
 
   <div class="form-inputs">
     <%= f.input :name, required: true, autofocus: true %>
-    <%= f.select_tag(:branch_id, options_for_select([['ГО', 1], ['Питер', 2], ['Татарстан', 3], ['Курск', 4], ['Нижний', 5], ['Урал', 6], ['Сибирь', 7], ['Ростов', 8], ['Самара', 9]]), class: 'form-control') %>
+    <%= f.select :branch_id, Branch.branch_select, class: 'form-control' %>
+    
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
   </div>
