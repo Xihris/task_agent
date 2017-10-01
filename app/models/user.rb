@@ -1,11 +1,19 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :authentication_keys => [:name]
+  devise :registerable, 
          :recoverable, :rememberable, :validatable
     has_many :units
     has_many :temp_tasks
     
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
+  end
+
+  
   
   def self.user_select
     User.all.map {|user| [user.name, user.id]}
