@@ -20,7 +20,11 @@ $(document).ready(function() {
 		$('.add_departament').toggle();
 	});
 
-	$('.datepicker').datepicker({"format": "dd.mm.yyyy", "autoclose": true});
+	$('.datepicker').datepicker({
+		"format": "dd.mm.yyyy",
+		"autoclose": true, 
+		language: 'ru',
+	});
 
 
 

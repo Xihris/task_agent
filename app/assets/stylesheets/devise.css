@@ -17,7 +17,7 @@
 	background-color: #00ABBD;
 	color: white;
 }
-.entry_btn_margin {
-	/*margin-right: 2px;*/
-
+.entry_btn:hover {
+	background-color: #00ABBD;
+	color: #E8E8E8;
 }
