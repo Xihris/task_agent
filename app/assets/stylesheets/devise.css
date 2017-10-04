@@ -1,3 +1,19 @@
 .entry_field {
 	max-width: 350px;
 }
+
+.login_form {
+	text-align: center;
+	margin-top: 100px;
+	background-color: white;
+	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 2px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.entry_btn {
+	background-color: #00ABBD;
+	color: white;
+}
