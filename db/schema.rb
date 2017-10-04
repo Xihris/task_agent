@@ -10,15 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170920141647) do
+ActiveRecord::Schema.define(version: 20171001150752) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.integer  "phone"
-    t.string   "department"
+    t.integer  "department_id"
     t.string   "photo"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "branches", force: :cascade do |t|
+    t.string   "branch"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.string   "full_department"
+    t.string   "short_department"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "temp_tasks", force: :cascade do |t|
@@ -29,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170920141647) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "branch_id"
   end
 
   create_table "units", force: :cascade do |t|
@@ -45,6 +59,7 @@ ActiveRecord::Schema.define(version: 20170920141647) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.text     "comment"
+    t.integer  "branch_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,19 +67,15 @@ ActiveRecord::Schema.define(version: 20170920141647) do
     t.integer  "role"
     t.string   "password"
     t.string   "photo"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email"
-    t.string   "encrypted_password",     default: "", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "branch_id"
+    t.boolean  "in_out",                 default: true
+    t.string   "encrypted_password",     default: "",   null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

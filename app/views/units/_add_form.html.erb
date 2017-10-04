@@ -6,23 +6,23 @@
 		<%= f.text_field :date_end, {:class => 'datepicker date-width', :placeholder => 'Дата окончания'} %>
 	</div>
 
-	<br>
-
 	<div>
-		<%= f.text_area :companys, rows: 1, class: 'form-control add_company', placeholder: 'Несколько компаний  через ";"' %>
+		<%= f.text_area :companys, rows: 2, class: 'form-control add_company', placeholder: 'Несколько компаний  через ";"' %>
 	</div>
 
-	<br>
-		
-	<div class="form-inline">
-		<label>Авторы</label>
-		<%= f.select :author_id, Author.all.map{ |author| [author.name, author.id] }, {:placeholder => ""}, {:class => 'form-control add_company_author'} %>
-		<div class="author btn btn-sm btn-primary">добавить автора</div>
+	<div class="form-inline margin_bottom">
+		<label>Инициаторы</label>
+		<%= f.select :author_id, Author.author_select, {:placeholder => ""}, {:class => 'form-control add_company_author'} %>
+		<div class="author btn btn-sm btn-info">добавить инициатора</div>
 	</div>
-	<br>
+
 	<div class="form-inline">
-		<label>Пользователи</label>
-		<%= f.select :user_id, User.all.map{ |user| [user.name, user.id] }, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
+		<div class="form-inline">
+	        <%= f.hidden_field :branch_id, :value => current_user.branch_id %>
+	    </div>
+	    
+		<label>Исполнители</label>
+		<%= f.select :user_id, User.where(branch_id: current_user.branch_id).user_out, {:placeholder => ""}, {:class => 'form-control add_company_user'} %>
 		<%= f.submit "Сохранить задачу", class: "btn btn-primary" %>
 	</div>
 

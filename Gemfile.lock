@@ -208,7 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-datepicker-rails (~> 1.6, >= 1.6.4.1)
+  bootstrap-datepicker-rails
   byebug
   coffee-rails (~> 4.2)
   devise

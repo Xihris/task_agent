@@ -24,6 +24,7 @@
 body {
 	/* Отступ снизу, по высоте футера */
 	margin-bottom: 120px !important;
+	background-color: #E8E8E8;
 }
 .footer {
 	position: absolute;
@@ -57,19 +58,44 @@ body {
 }
 
 .block-btn {
-	/*padding-right: 2px; */
 	margin-left: -11px;
 }
 
 .add_company {
 	max-width: 600px;
+	margin-bottom: 20px;
 }
 .add_company_author {
-	min-width: 418px;
+	min-width: 357px;
 }
 .add_company_user {
-	min-width: 344px;
+	min-width: 352px;
 }
 .date-width {
 	min-width: 299px;
+	margin-bottom: 20px;
+}
+.authors_style_phone {
+	min-width: 270px;
+}
+.authors_style_photo {
+	min-width: 416px;
+	margin-bottom: 20px;
+}
+.authors_style {
+	min-width: 170px;
+}
+#authors_style_name {
+	min-width: 415px;
+	margin-bottom: 20px;
+}
+.margin_bottom {
+	margin-bottom: 20px;
+}
+#forms_css {
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+.save_dep {
+	min-width: 176px;
 }

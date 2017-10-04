@@ -11,12 +11,13 @@ class AuthorsController < ApplicationController
 
   def show
     @author = Author.find(params[:id])
-    @units = Unit.where(author_id: params[:id])
+    # @units = Unit.where(author_id: params[:id])
+    # @department = Department.all
   end
 
-  def department
-    @authors = Author.where(department: params[:department], name: params[:name])
-  end
+  # def department
+  #   @authors = Author.where(id: params[:id], department_id: params[:department_id])
+  # end
 
   def index
     @authors = Author.all
@@ -37,6 +38,6 @@ class AuthorsController < ApplicationController
 
   private
   def author_params
-    params.require(:author).permit(:name, :phone, :department, :photo)
+    params.require(:author).permit(:name, :phone, :department_id, :photo)
   end
 end

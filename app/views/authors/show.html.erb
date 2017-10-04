@@ -6,7 +6,7 @@
     <div class="col-md-6">
     <p><%= link_to @author.name, edit_author_path %></p>
     <p><%= @author.phone %></p>
-    <p><%= link_to @author.department, authors_department_path(@author) %></p>
+    <p><%= link_to @author.department_id, authors_department_path(@author) %></p>
     </div>
     </div>
 	<table class="table table-condensed">
@@ -18,7 +18,7 @@
 			</tr>
 		</thead>
 <tbody>
-<% @units.each do |unit| %>
+<% @author.units.each do |unit| %>
 	
 	<% @date_result = (unit.date_end - Date.today).to_i %>
   		
