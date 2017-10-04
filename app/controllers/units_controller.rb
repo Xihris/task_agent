@@ -1,10 +1,10 @@
 class UnitsController < ApplicationController
   def new
     @temps = TempTask.last
-    a = JSON.parse(@temps.to_json).to_a.shift(7)
+    a = JSON.parse(@temps.to_json).to_a.shift(9)
     a[1][1].split(/; /).map{|item| Unit.create(
     {'unit': item, 'id_temp_task': a[0][1], 'date_start': a[2][1], 'date_end': a[3][1],
-    'author_id': a[4][1], 'user_id': a[5][1], 'branch_id': a[6][1] }
+    'author_id': a[4][1], 'user_id': a[5][1], 'branch_id': a[8][1] }
     )}
     @temps.destroy
     redirect_to units_path
