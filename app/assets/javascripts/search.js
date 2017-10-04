@@ -20,10 +20,12 @@ $(document).ready(function() {
 		$('.add_departament').toggle();
 	});
 
+// календарь
 	$('.datepicker').datepicker({
 		"format": "dd.mm.yyyy",
 		"autoclose": true, 
 		language: 'ru',
+		todayHighlight: true
 	});
 
 
@@ -51,10 +53,4 @@ $(document).ready(function() {
 		}
 	};
 	
-	// function names() {
-	// 	let numnum = Math.round($('.left-names')[0].offsetWidth / 6);		
-	// 	$.map( $('.btn-zenit'), function(i) { i.style.width = numnum + "px" });
-	// }
-	// names();
-
 });
