@@ -2,23 +2,26 @@
   <div class="row">
     <div class="col-xs-4"></div>
     <div class="col-xs-4 login_form">
-      <h2>Sign up</h2>
+      <h2>Регистрация</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
           
         <div class="form-inputs entry_field">
-          <%= f.input :name, required: true, autofocus: true %>
-          <%= f.select :branch_id, Branch.branch_select, class: 'form-control entry_field' %>
-            
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
+          <%= f.input :name, required: true, autofocus: true, label: 'Имя' %>
+          <%= f.input :branch_id, required: true, priority: Branch.branch_select[0][0], collection: Branch.branch_select, prompt: "Выбор филиала", label: 'Филиал' %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: 'Пароль' %>
+          <%= f.input :password_confirmation, required: true, label: 'Подтверждение пароля' %>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: 'btn-block entry_btn' %>
+          <%= f.button :submit, "Зарегистрироваться", class: 'btn btn-block entry_btn' %>
         </div>
       <% end %>
+
+
+
+
 
       <%= render "devise/shared/links" %>
     </div>
