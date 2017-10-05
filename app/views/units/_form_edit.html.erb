@@ -1,0 +1,26 @@
+<%= simple_form_for(thing) do |f| %>
+	<td>
+		<%= f.button :submit, action: thing.save %>
+		<!-- не работает карандаш после возврата назад -->
+		<%= link_to 'Back', :back %> 
+	</td>	  
+	<td><%= f.input :unit, label: false %></td>
+	<td>
+		<%= f.text_field :date_start, {:class => 'datepicker'} %>
+		<%= f.text_field :date_end, {:class => 'datepicker'} %>
+	</td>
+	<td>
+		<%= f.input :user_id, label: false do %>
+			<%= f.select :user_id, User.where(branch_id: current_user.branch_id).user_out, {:placeholder => ""}, {:class => 'form-control'} %>
+		<% end %>
+				
+	</td>
+	<td>
+		<%= f.input :author_id, label: false do %>
+		  <%= f.select :author_id, Author.author_select, {:placeholder => ""}, {:class => 'form-control'} %>
+		<% end %>
+	</td>
+<% end %>
+
+
+			

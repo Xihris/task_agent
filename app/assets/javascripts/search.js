@@ -1,6 +1,15 @@
 $(document).ready(function() {
-	
-	
+
+	$('.pencil').click(function() {
+		$('.form_edit_style').toggle();
+		if ($('.form_edit_style').show()) {
+			$('.pencil').hide();
+		}
+	});
+
+
+
+
 	$(document).on("click", "#home_btn", function(){
    		document.location.href = "/";
 	});

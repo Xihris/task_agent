@@ -14,14 +14,14 @@ class UnitsController < ApplicationController
     edit
   end
 
-  # def complite
-  #   edit
-  #   if @unit.update(unit_params)
-  #     redirect_to units_path
-  #   else
-  #     render 'complite'
-  #   end
-  # end
+  def complite
+    edit
+    if @unit.update(unit_params)
+      redirect_to units_path
+    else
+      render 'complite'
+    end
+  end
 
   def search
     @searchs = if params[:term]
@@ -66,7 +66,7 @@ class UnitsController < ApplicationController
   def update
     edit
     if @unit.update(unit_params)
-      redirect_to units_path
+      redirect_to root_path
     else
       render 'edit'
     end

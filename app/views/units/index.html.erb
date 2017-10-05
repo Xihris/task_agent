@@ -9,11 +9,11 @@
 	    	  <td class="names btn-group">
 				<% if user.in_out? %>
 				<% case user.in_out? %>
-						<% when current_user.branch_id == 0 %>
-				  			<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
-						<% when current_user.branch_id == user.branch_id %>
-							<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
-						<% end %>
+					<% when current_user.branch_id == 0 %>
+				  		<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+					<% when current_user.branch_id == user.branch_id %>
+						<%= button_to [user.name, find_count(user)], user_path(user), method: :get, class: "btn btn-success btn-lg btn-zenit" %>
+					<% end %>
 				<% end %>
 			  </td>
 			<% end %>

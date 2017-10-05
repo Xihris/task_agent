@@ -1,17 +1,20 @@
 <div class="container">
 	<div class="row">
-	<div class="col-md-6"> 
+		<div class="col"> 
 			<%= simple_form_for(@unit) do |f| %>
-			<%= f.input :unit %>
-			<%= f.input :date_start %>
-			<%= f.input :date_end %>
-			<%= f.input :author_id, label: 'Author' do %>
-        	<%= f.select :author_id, Author.author_select, {:placeholder => ""}, {:class => 'form-control'} %>
-        	<% end %>
-        	<%= f.input :user_id, label: 'User' do %>
-			<%= f.select :user_id, User.where(current_user.branch_id == user.branch_id).user_out, {:placeholder => ""}, {:class => 'form-control'} %>
-			<% end %>
-			<%= f.button :submit %>
+				<div class="form-inline">
+					<%= f.input :unit, label: false %>
+					<%= f.text_field :date_start, {:class => 'datepicker'} %>
+					<%= f.text_field :date_end, {:class => 'datepicker'} %>
+					<%= f.input :author_id, label: false do %>
+		        		<%= f.select :author_id, Author.author_select, {:placeholder => ""}, {:class => 'form-control'} %>
+		        	<% end %>
+		        	<%= f.input :user_id, label: false do %>
+						<%= f.select :user_id, User.where(branch_id: current_user.branch_id).user_out, {:placeholder => ""}, {:class => 'form-control'} %>
+					<% end %>
+					<%= f.button :submit, label: false %>
+				</div>
+
 			<% end %>
 		</div>
 	</div>
