@@ -24,7 +24,6 @@
 body {
 	/* Отступ снизу, по высоте футера */
 	margin-bottom: 120px !important;
-	/*background-color: #E8E8E8;*/
 }
 .footer {
 	position: absolute;
