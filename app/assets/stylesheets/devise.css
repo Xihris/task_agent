@@ -3,7 +3,6 @@
 }
 
 .login_form {
-	text-align: center;
 	margin-top: 100px;
 	background-color: white;
 	padding-bottom: 30px;
@@ -12,6 +11,12 @@
 	padding-right: 30px;
 	border-radius: 2px;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.login_form h2 {
+	text-align: center;
+}
+.render_login_form {
+	text-align: center;	
 }
 .entry_btn {
 	background-color: #00ABBD;
