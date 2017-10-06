@@ -1,11 +1,8 @@
 $(document).ready(function() {
 
-	$('.pencil').click(function() {
-		$('.form_edit_style').toggle();
-		if ($('.form_edit_style').show()) {
-			$('.pencil').hide();
-		}
-	});
+	// $('.pencil').click(function() {
+	// 	$('.form_edit_style').toggle();
+	// });
 
 
 
@@ -48,19 +45,20 @@ $(document).ready(function() {
 //     $( this ).removeClass( "selected" );
 //   }
 // );
-	table.onmouseover = function(event) {
-		let row = event.target.parentElement;
-		if(row.localName == 'tr'){
-			var className = row.className;
-			row.className = "info";
-		}
-		
-		table.onmouseout = function(event) {
-			row = event.target.parentElement;
-			if(row.localName == 'tr') {
-				row.className = className;
-			}
-		}
-	};
+	// table.onmouseover = function(event) {
+	// 	let row = event.target.parentElement;
+	// 	if(row.localName == 'tr'){
+	// 		var className = row.className;
+	// 		row.className = "info";
+	// 	}
+	// 			console.log("target");
+
+	// 	table.onmouseout = function(event) {
+	// 		row = event.target.parentElement;
+	// 		if(row.localName == 'tr') {
+	// 			row.className = className;
+	// 		}
+	// 	}
+	// };
 	
 });
