@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'units/group/:id' => 'units#group', as: :units_group
   get 'units/search' => 'units#search', as: :units_search
   get 'units/complite/:id' => 'units#complite', as: :units_complite
+  get 'units/group_complite/:id' => 'units#group_complite', as: :units_group_complite
   get 'authors/department/:id' => 'authors#department', as: :authors_department
 
   resources :authors, :users, :units, except: [:destroy]

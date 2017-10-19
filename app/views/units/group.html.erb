@@ -8,20 +8,20 @@
 				<th>Инициатор</th>
 			</tr>
 		</thead>
-<tbody>
-<% @units.each do |unit| %>
-	<% if unit.date_end.month == Time.now.month %>
-  	<% @date_result = unit.date_end.day - Time.now.day %>
- 	<% else %>
-  	<% @date_result = 3 %>
-<% end %>
-	<tr class=<%= color %>>
-		<td><%= unit.unit %></td>
-		<td><%= l unit.date_end, format: :long %></td>
-		<td><%= link_to unit.user.name, user_path(unit.user_id) if !unit.user_id.nil? %></td>
-		<td><%= link_to unit.author.name, author_path(unit.author_id) %></td>
-	</tr>
-<% end %>
-	</tbody>
-</table>
+		<tbody>
+			<% @units.each do |unit| %>
+				<% if unit.date_end.month == Time.now.month %>
+			  	<% @date_result = unit.date_end.day - Time.now.day %>
+			 	<% else %>
+			  	<% @date_result = 3 %>
+				<% end %>
+			<tr class=<%= color %>>
+				<td><%= unit.unit %></td>
+				<td><%= l unit.date_end, format: :long %></td>
+				<td><%= link_to unit.user.name, user_path(unit.user_id) if !unit.user_id.nil? %></td>
+				<td><%= link_to unit.author.name, author_path(unit.author_id) %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
 </div>

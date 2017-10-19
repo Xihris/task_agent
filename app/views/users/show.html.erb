@@ -16,10 +16,15 @@
 		<td><%= unit.unit %></td>
 		<td><%= l unit.date_end, format: :long %></td>
 		<td><%= link_to unit.author.name, author_path(unit.author_id) %></td>
-		<td><%= link_to units_complite_path(unit.id), :class=> "glyphicon glyphicon-floppy-saved" do %></td>
+		<td><%= link_to units_group_complite_path(unit.id_temp_task), :class=> "glyphicon glyphicon-floppy-saved" do %></td>
 		<% end %>
+		<td><%= link_to '',data: { id_temp_task: unit.id_temp_task } , class: "glyphicon glyphicon-floppy-saved floppy" do %><% end %></td>  
+		
 	</tr>
 <% end %>
 	</tbody>
 </table>
+
+
+
 </div>

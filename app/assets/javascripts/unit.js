@@ -26,7 +26,6 @@ $(document).ready(function() {
 
 		let count = $('#form_for_reload')[0].childElementCount + 1;
  	    $('#form_for_reload').append("<option value=" + count + ">" + simbols + "</option>");
- 	   	
 	});
 });
 

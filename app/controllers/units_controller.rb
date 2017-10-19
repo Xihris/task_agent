@@ -7,7 +7,7 @@ class UnitsController < ApplicationController
     'author_id': a[4][1], 'user_id': a[5][1], 'branch_id': a[8][1] }
     )}
     @temps.destroy
-    redirect_to units_path
+    redirect_to root_path
   end
 
   def show
@@ -61,6 +61,14 @@ class UnitsController < ApplicationController
 
   def complite
     @unit = Unit.find params[:id]
+  end
+
+  def group_complite
+    @units = Unit.where(id_temp_task: params[:id]).where(complete: false).where(user_id: current_user)
+    respond_to do |format|
+      # format.html # index.html.erb
+      format.js { render js: @units}
+    end
   end
 
   def update

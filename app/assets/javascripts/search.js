@@ -1,17 +1,11 @@
 $(document).ready(function() {
 
-	// $('.pencil').click(function() {
-	// 	$('.form_edit_style').toggle();
-	// });
-
-
-
-
 	$(document).on("click", "#home_btn", function(){
    		document.location.href = "/";
 	});
 
-	$('.task').click(function() {
+	$('.task').click(function(e) {
+		e.preventDefault();
 		$('.add_task').toggle();
 		if ($('.add_task')["0"].style.display == "none") {
 			$('.author-tab').hide();
